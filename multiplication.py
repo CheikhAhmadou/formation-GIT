@@ -26,7 +26,7 @@ class TableDeMultiplication:
 
     # fonction d'affichage (si existe remplace __repr__ dans le cas des print et conversion en string)
     def __str__(self):
-        print("méthode d'affichage de TableDeMultiplication")
+        print("méthode d'affichage de TableDeMultiplication avec un resultat")
         res = "TableDeMultiplication de {}\n -------------------\n".format(self._base)
         for index, result in enumerate(self._resultats):
             res += "{} x {} = {}\n".format(index+1, self._base, result)
@@ -47,7 +47,7 @@ class TableDeMultiplication:
     def set_longueur(self, longueur):
         if longueur < 1:
             raise TypeError
-        print("Je modifie la longueur")
+        print("Je modifie la longueur et afficher sa ")
         self._longueur = longueur
         self._resultats = TableDeMultiplication._calculate_results(self._base, self._longueur)
 
@@ -67,6 +67,6 @@ if __name__ == "__main__":
     print(table.longueur)
     print(table)
     print(table[5])
-    print(table[3:10])
+    print(table[2:10])
     print(table + TableDeMultiplication(3,3))
     print("salut")
