@@ -66,6 +66,7 @@ if __name__ == "__main__":
     print(len(table))
     print(table.longueur)
     print(table)
-    print(table[3])
+    print(table[5])
     print(table[3:10])
     print(table + TableDeMultiplication(3,3))
+    print("salut")
